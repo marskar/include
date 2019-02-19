@@ -19,6 +19,7 @@ Note: This skeleton file can be safely removed if not needed!
 import argparse
 import sys
 import logging
+import pathlib
 
 from include import __version__
 
@@ -28,6 +29,9 @@ __license__ = "MIT"
 
 _logger = logging.getLogger(__name__)
 
+def read_data(path: str = '../../to_be_included_dir/data.txt') -> str:
+    """Read text file outside of package."""
+    return pathlib.Path(path).read_text()
 
 def fib(n):
     """Fibonacci example function
