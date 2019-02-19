@@ -29,7 +29,7 @@ __license__ = "MIT"
 
 _logger = logging.getLogger(__name__)
 
-def read_data(path: str = '../../to_be_included_dir/data.txt') -> str:
+def read_data(path: str = 'to_be_included_dir/data.txt') -> str:
     """Read text file outside of package."""
     return pathlib.Path(path).read_text()
 
